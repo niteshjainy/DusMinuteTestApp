@@ -27,6 +27,9 @@ const CartItem = (state = initialState, action) => {
         return !(item.order_quantity == 0);
       });
       return { ...state, product_list, cart_product };
+
+    case "RESET":
+      return { ...state, product_list: Data, cart_product: [] };
     default:
       return state;
   }

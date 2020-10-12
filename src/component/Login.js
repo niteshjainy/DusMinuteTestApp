@@ -22,7 +22,7 @@ export default class Login extends Component {
             width: "100%",
             resizeMode: "stretch",
             position: "absolute",
-            top: 40,
+            top: 20,
           }}
         ></Image>
 

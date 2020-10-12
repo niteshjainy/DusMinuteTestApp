@@ -26,7 +26,10 @@ class Cards extends Component {
           }}
         >
           <TouchableOpacity
-            onPress={() => alert("Order Subimitted successfully")}
+            onPress={() => {
+              this.props.reset();
+              alert("Order Subimitted successfully");
+            }}
           >
             <Text
               style={{
@@ -57,4 +60,13 @@ const mapStateToProps = (state) => {
     cart_product: state.cart_product,
   };
 };
-export default connect(mapStateToProps, null)(Cards);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    reset: () =>
+      dispatch({
+        type: "RESET",
+      }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);
