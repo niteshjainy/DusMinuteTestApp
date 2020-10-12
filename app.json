@@ -17,7 +17,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.Jainy.DusMinuteTestApp",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.Jainy.DusMinuteTestApp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
